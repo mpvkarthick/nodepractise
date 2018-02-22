@@ -1,17 +1,19 @@
-function person(firstname, lastname, greet) {
+function person(firstname, lastname){
     this.firstname = firstname;
     this.lastname = lastname;
-    this.greet = function () {
-        console.log('Hello ' + this.firstname + ' ' + this.lastname);
-    }
 }
 
-person.prototype.greetWithPrototype = function () {
-    console.log('Greetings from Prototype ' + 'Hello ' + this.firstname + ' ' + this.lastname);
-    console.log('Greeting using greet function '+this.greet());
+person.prototype.greet = function(){
+    console.log('Hello '+this.firstname+' '+this.lastname);
 }
-var mannepK = new person('Mannepalli', 'Karthik');
-mannepK.greet();
-mannepK.greetWithPrototype();
-console.log(mannepK.__proto__);
+
+var mannepk = new person('Karthik','Mannepalli');
+mannepk.greet();
+
+
+//Not the standard way of doing prtotype
+var kmannep = {};
+kmannep.__proto__ = mannepk;
+kmannep.greet();
+console.log(kmannep.firstname);
 
