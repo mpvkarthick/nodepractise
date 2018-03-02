@@ -1,6 +1,7 @@
 function person(firstname, lastname){
     this.firstname = firstname;
     this.lastname = lastname;
+    
 }
 
 person.prototype.greet = function(){
