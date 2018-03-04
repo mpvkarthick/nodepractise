@@ -1,18 +1,17 @@
 
-// Still in Progress
+//invoke a function that internally executes iife
 
-function greetHello() {
-    console.log();
+function addWrapper(a, b) {
+
+    (
+        function add() {
+
+            console.log(a + b);
+            console.log('hello');
+
+        }(a, b)
+    );
 }
 
-var addfunctionWrapper = (
-    function () {
-        // Define Module 1
-        var addfunction = function () {
-            console.log('Hello ');
-        };
-        //return addfunction;
-    }
-);
 
-console.log(addfunctionWrapper);
+addWrapper(1, 2);
