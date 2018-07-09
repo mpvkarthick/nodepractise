@@ -5,7 +5,7 @@ function greetWorld() {
 // functions are first class
 function logGreetWorld(fn){
     console.log("Inside Log Greet World");
-     fn();
+     //fn();
 }
 
 function loggreetworld(){
