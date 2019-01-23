@@ -5,7 +5,7 @@ function greetWorld() {
 // functions are first class
 function logGreetWorld(fn){
     console.log("Inside Log Greet World");
-     //fn();
+     fn();
 }
 
 function loggreetworld(){
@@ -35,17 +35,17 @@ logGreetWorld(function(){
 // Prints inside lower case greet world
 loggreetworld();
 // Prints Inside Log Greet World and throws an error that fn is not a function
-logGreetWorld();
+//#######logGreetWorld();
 // Prints Hello World, Inside Log Greet World and then throws an error that fn is not a function
-logGreetWorld(greetWorld());
-// Prints Hello World No Params
+//#######logGreetWorld(greetWorld());
+//Prints Hello World No Params
 noParamGreetWorld();
 // Prints Inside Log Greet World, Hello World No Params
 logGreetWorld(noParamGreetWorld);
 // Prints Hello Karthik
 greetMe('Karthik');
 // Prints Hello Karthik, Inside Greet World and throws an error  that fn is not a function
-logGreetWorld(greetMe('Karthik'));
+//#######logGreetWorld(greetMe('Karthik'));
 
 
 
